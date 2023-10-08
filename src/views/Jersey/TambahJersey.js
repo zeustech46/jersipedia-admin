@@ -152,7 +152,6 @@ class TambahJersey extends Component {
     ) {
       //action
       this.props.dispatch(tambahJersey(this.state));
-      // console.log("Berhasil mantap");
     } else {
       Swal.fire({
         icon: "error",
@@ -163,7 +162,6 @@ class TambahJersey extends Component {
         timer: 2000,
         // timerProgressBar: true,
       });
-      console.log("Berhasil : ", this.state);
     }
   };
 

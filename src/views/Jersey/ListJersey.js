@@ -44,7 +44,6 @@ class ListJersey extends Component {
 
   render() {
     const { listJerseyResult, listJerseyLoading, listJerseyError } = this.props;
-    console.log(listJerseyResult);
 
     return (
       <div className="content">

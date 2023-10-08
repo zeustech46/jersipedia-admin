@@ -56,8 +56,6 @@ export const uploadJersey = (gambar, imageToDB) => {
 
     const uploadTask = uploadBytesResumable(storageRef, gambar);
 
-    console.log("masuk sini");
-
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -72,7 +70,6 @@ export const uploadJersey = (gambar, imageToDB) => {
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          console.log("File available at", downloadURL);
           const dataBaru = {
             image: downloadURL,
             imageToDB: imageToDB,
@@ -149,8 +146,6 @@ export const updateJersey = (data) => {
       ukuran: data.ukuranSelected,
       ready: data.ready,
     };
-
-    console.log("isi Data baru : ", dataBaru);
 
     update(refDatabase(db, "jerseys/" + data.id), dataBaru)
       .then((res) => {

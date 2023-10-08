@@ -21,7 +21,6 @@ class ListPesanan extends Component {
 
   render() {
     const { listPesananResult } = this.props;
-    console.log(listPesananResult);
     return (
       <div className="content">
         <Row>
@@ -47,7 +46,7 @@ class ListPesanan extends Component {
                   </thead>
                   <tbody>
                     {Object.keys(listPesananResult).map((key, index) => (
-                      <tr>
+                      <tr key={key}>
                         <td className="align-top" align="center">
                           {index + 1}
                         </td>

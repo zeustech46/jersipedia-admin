@@ -41,16 +41,12 @@ export const updatePesanan = (order_id, transaction_status) => {
 
     // Dapatkan data dari firebase
 
-    console.log("masuk sini");
-
-    update(refDatabase(db, "histories/" + order_id.split("-")[2]), {
+    update(refDatabase(db, "histories/" + order_id), {
       status: status,
     })
       .then((res) => {
-        console.log("masuk database");
         // berhasil
         dispatchSuccess(dispatch, UPDATE_PESANAN, "Update Berhasil");
-        console.log("masuk Success");
       })
       .catch((error) => {
         dispatchError(dispatch, UPDATE_PESANAN, error);
