@@ -115,7 +115,7 @@ class TambahJersey extends Component {
     } else {
       //jika user menghapus ceklis
       const ukuranBaru = this.state.ukuranSelected
-        .filter((ukuran) => ukuran != value)
+        .filter((ukuran) => ukuran !== value)
         .map((filterUkuran) => {
           return filterUkuran;
         });
@@ -178,13 +178,11 @@ class TambahJersey extends Component {
       ukurans,
       ready,
       liga,
-      ukuranSelected,
       imageToDB1,
       imageToDB2,
       movePage,
     } = this.state;
-    const { listLigaResult, uploadJerseyResult, tambahJerseyLoading } =
-      this.props;
+    const { listLigaResult, tambahJerseyLoading } = this.props;
 
     return (
       <div className="content">

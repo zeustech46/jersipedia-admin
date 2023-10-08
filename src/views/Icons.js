@@ -19,7 +19,7 @@
 import React from "react";
 
 // reactstrap components
-import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import { Card, CardBody, Row, Col } from "reactstrap";
 
 function Icons() {
   return (
