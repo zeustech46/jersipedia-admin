@@ -3,6 +3,10 @@ import { Row, Col, Card, CardHeader, CardBody, Button } from "reactstrap";
 import Logo from "../../assets/img/logoUtama.svg";
 
 export default class Error extends Component {
+  toHistory = () => {
+    window.ReactNativeWebView.postMessage("Selesai");
+  };
+
   render() {
     let search = window.location.search;
     let params = new URLSearchParams(search);
@@ -25,7 +29,11 @@ export default class Error extends Component {
               <p>ORDER ID : {order_id}</p>
               <p>STATUS TRANSAKSI : {transaction_status}</p>
 
-              <Button color="primary" type="submit">
+              <Button
+                color="primary"
+                type="submit"
+                onClick={() => this.toHistory()}
+              >
                 Lanjutkan
               </Button>
             </CardBody>
