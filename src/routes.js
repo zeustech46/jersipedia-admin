@@ -1,0 +1,83 @@
+import {
+  Dashboard,
+  Icons,
+  ListLiga,
+  TambahLiga,
+  EditLiga,
+  ListJersey,
+  TambahJersey,
+  EditJersey,
+  ListPesanan,
+} from "./views";
+
+var routes = [
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    icon: "nc-icon nc-bank",
+    component: <Dashboard />,
+    layout: "/admin",
+    sidebar: true,
+  },
+  {
+    path: "/icons",
+    name: "Icons",
+    icon: "nc-icon nc-diamond",
+    component: <Icons />,
+    layout: "/admin",
+    sidebar: true,
+  },
+  {
+    path: "/liga",
+    name: "Master Liga",
+    icon: "nc-icon nc-world-2",
+    component: <ListLiga />,
+    layout: "/admin",
+    sidebar: true,
+  },
+  {
+    path: "/liga/tambahliga",
+    name: "Tambah Liga",
+    component: <TambahLiga />,
+    layout: "/admin",
+    sidebar: false,
+  },
+  {
+    path: "/liga/editliga/:id",
+    name: "Edit Liga",
+    component: <EditLiga />,
+    layout: "/admin",
+    sidebar: false,
+  },
+  {
+    path: "/jersey",
+    name: "Master Jersey",
+    icon: "nc-icon nc-bag-16",
+    component: <ListJersey />,
+    layout: "/admin",
+    sidebar: true,
+  },
+  {
+    path: "/pesanan",
+    name: "Master Pesanan",
+    icon: "nc-icon nc-basket",
+    component: <ListPesanan />,
+    layout: "/admin",
+    sidebar: true,
+  },
+  {
+    path: "/jersey/tambahjersey",
+    name: "Tambah Jersey",
+    component: <TambahJersey />,
+    layout: "/admin",
+    sidebar: false,
+  },
+  {
+    path: "/jersey/editJersey/:id",
+    name: "Edit Liga",
+    component: <EditJersey />,
+    layout: "/admin",
+    sidebar: false,
+  },
+];
+export default routes;
