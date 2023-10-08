@@ -169,7 +169,11 @@ function Header(props) {
               toggle={(e) => dropdownToggle(e)}
             >
               <DropdownToggle caret nav>
-                <label className="mr-2">{data.nama}</label>
+                {data ? (
+                  <label className="mr-2">{data.nama}</label>
+                ) : (
+                  <label className="mr-2">Pengguna</label>
+                )}
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem

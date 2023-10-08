@@ -27,14 +27,17 @@ import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
 import { connect } from "react-redux";
+import { checkLogin } from "../action/AuthAction";
+import { useNavigate } from "react-router-dom";
 
 var ps;
 
 function Dashboard(props) {
   const mainPanel = React.useRef();
   const location = useLocation();
+  const navigate = useNavigate();
   React.useEffect(() => {
-    // props.dispatch(checkLogin(navigate));
+    props.dispatch(checkLogin(navigate));
 
     if (navigator.platform.indexOf("Win") > -1) {
       ps = new PerfectScrollbar(mainPanel.current);
